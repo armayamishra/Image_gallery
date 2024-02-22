@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="image\mountain1.jpg" type="image/x-icon">
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <div class="images">
+        <div class="picture">
+            <img src="image\nature.jpg" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\nature1.jpg" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\nature2.jpg" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\nature3.webp" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\beach.avif" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\beach1.jpg" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\beach2.jpg" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\hill.jpg" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\moon.avif" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\moon2.avif" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\mountain.webp" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\mountain1.jpg" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\mountain2.jpg" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\nature4.jpg" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\nature5.jpg" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\rain.avif" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\rain1.avif" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\snowfall.webp" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\sunrise.jpg" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\sunrise2.avif" height="150px" width="200px">
+        </div>
+        <div class="picture">
+            <img src="image\sunset.jpg" height="150px" width="200px">
+        </div>
+    </div>
+
+    <div class="pop">
+        <span>&times;</span>
+        <img src="nature.jpg">
+    </div>
+
+    <script>
+        document.querySelectorAll('.images img').forEach(picture =>{
+            picture.onclick = () => {
+                document.querySelector('.pop').style.display = 'block';
+                document.querySelector('.pop img').src = picture.getAttribute('src');
+            }
+        });
+        document.querySelector('.pop span').onclick = () =>{
+            document.querySelector('.pop').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
